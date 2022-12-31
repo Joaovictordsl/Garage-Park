@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Quadrados</title>
+</head>
+<body style="background-color: powderblue;">
+    <div class="container">
+        <div class="quadrado" id="vagaescondida"><h1>2</h1></div>      
+        <div class="quadrado" id="vagaescondida"><h1>2</h1></div>      
+        <div class="quadrado" id="vagaescondida"><h1>2</h1></div>      
+      <div class="quadrado" id="vagainvisivel"><h1>1</h1></div>    
+      <div class="quadrado" id="vaga"><h1>2</h1></div>      
+      <div class="quadrado" id="vaga"><h1>3</h1></div>      
+      <div class="quadrado" id="vaga"><h1>6</h1></div>      
+      <div class="quadrado" id="vaga"><h1>7</h1></div>  
+      <div class="quadrado"><h1>10</h1></div>      
+      <div class="quadrado"><h1>12</h1><hr><h1>13</h1></div>      
+      <div class="quadrado"><h1>16</h1><hr><h1>18</h1></div>      
+      <div class="quadrado"><h1>17</h1><hr><h1>19</h1></div>      
+      <div class="quadrado"><h1>22</h1><hr><h1>23</h1></div>      
+      <div class="quadrado" id="vagaescondida"><h1>2</h1></div>      
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>      
+      <div class="quadrado"><h1>27</h1><hr><h1>28</h1></div>      
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>  
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado"id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado" id="vaga1"><h1>1</h1></div>   
+      <div class="quadrado" id="vagainvisivel2"><h1></h1></div>   
+      <div class="quadrado" id="vaga4"><h1>4</h1></div>   
+      <div class="quadrado"><h1>5</h1></div>   
+      <div class="quadrado"><h1>8</h1></div>   
+      <div class="quadrado"><h1>9</h1></div>   
+      <div class="quadrado"><h1>11</h1></div>   
+      <div class="quadrado"><h1>14</h1><hr><h1>15</h1></div>   
+      <div class="quadrado"><h1>20</h1></div>   
+      <div class="quadrado"><h1>21</h1></div>   
+      <div class="quadrado"><h1>24</h1><hr><h1>25</h1></div>   
+      <div class="quadrado" id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado" id="vagaescondida"><h1>2</h1></div>   
+      <div class="quadrado"><h1>29</h1><hr><h1>30</h1></div>   
+
+    </div>
+    <div class="container2">
+      <div class="quadrado"><h1>44</h1></div>      
+      <div class="quadrado"><h1>43</h1><hr></div>      
+      <div class="quadrado"><h1>42</h1><hr></div>      
+      <div class="quadrado"><h1>41</h1></div>      
+      <div class="quadrado"><h1>40</h1></div>      
+      <div class="quadrado"><h1>39</h1><hr></div>      
+      <div class="quadrado"><h1>38</h1></div>      
+      <div class="quadrado"><h1>37</h1><hr></div>      
+      <div class="quadrado"><h1>36</h1></div>      
+      <div class="quadrado"><h1>34</h1><hr><h1>35</h1></div>      
+      <div class="quadrado"><h1>33</h1><hr></div>      
+      <div class="quadrado"><h1>31</h1><hr><h1>32</h1></div>  
+
+    
+    </div>
+
+    
+</body>
+</html>
+
+<style>
+    #vagaescondida{
+        visibility: hidden;
+    }
+
+    .container {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+    flex-wrap: wrap;
+    }
+    #vagainvisivel{
+      visibility: hidden;
+      margin-top: 3%;
+      width: 104px;
+      height: 50px;
+    }
+    #vagainvisivel2{
+        visibility:hidden;
+        width:0px;
+    }
+
+    #vaga1{
+        margin-top: 3%;
+        width: 100px;
+        height: 50px;
+    }
+
+    .quadrado {
+      width: 50px;
+      height: 10rem;
+      background-color: blue;
+      text-align: center;
+      border: 1px solid black;
+    }
+    .container2 {
+    margin-left: 20%;
+    margin-top: 10%;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+    flex-wrap: wrap;
+    }
+    
+  </style>
+
+<script> 
+    const quadrado = document.querySelectorAll(".quadrado");
+
+    let corAtual = "azul";
+
+    quadrado.forEach(quadrado => {
+        quadrado.addEventListener("click", function() {
+        if (corAtual === "azul") {
+      quadrado.style.backgroundColor = "red";
+      corAtual = "vermelho";
+    } else if(corAtual === "vermelho"){
+      quadrado.style.backgroundColor = "purple";
+      corAtual = "roxo";
+    } else {
+        quadrado.style.backgroundColor = "blue";
+        corAtual = "azul";
+    }
+    });
+  });
+  </script>
